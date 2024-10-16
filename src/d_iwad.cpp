@@ -706,7 +706,7 @@ int FIWadManager::IdentifyVersion (TArray<FString> &wadfiles, const char *iwad, 
 	// If we still haven't found a suitable IWAD let's error out.
 	if (picks.Size() == 0)
 	{
-		I_FatalError("Cannot find Relentless Frontier Game Data.\n"
+		I_FatalError("Cannot find Mohrta Game Data.\n"
 			"Did you install " GAMENAME " properly?\n"
 			"\n");
 	}
