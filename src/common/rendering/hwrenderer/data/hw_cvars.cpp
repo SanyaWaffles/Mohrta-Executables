@@ -69,7 +69,7 @@ CUSTOM_CVAR(Bool, gl_plane_reflection, true, CVAR_GLOBALCONFIG|CVAR_ARCHIVE)
 	gl_plane_reflection_i = self;
 }
 
-CUSTOM_CVARD(Float, vid_gamma, 1.f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "adjusts gamma component of gamma ramp")
+CUSTOM_CVARD(Float, vid_gamma, .94f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "adjusts gamma component of gamma ramp")
 {
 	if (self < 0) self = 1;
 	else if (self > 4) self = 4;
@@ -81,7 +81,7 @@ CUSTOM_CVARD(Float, vid_contrast, 1.f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "adjust
 	else if (self > 5) self = 5;
 }
 
-CUSTOM_CVARD(Float, vid_brightness, 0.f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "adjusts brightness component of gamma ramp")
+CUSTOM_CVARD(Float, vid_brightness, -0.05f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "adjusts brightness component of gamma ramp")
 {
 	if (self < -2) self = -2;
 	else if (self > 2) self = 2;
@@ -120,7 +120,7 @@ CUSTOM_CVARD(Float, gl_texture_filter_anisotropic, 8.f, CVAR_ARCHIVE | CVAR_GLOB
 	screen->SetTextureFilterMode();
 }
 
-CUSTOM_CVARD(Int, gl_texture_filter, 4, CVAR_ARCHIVE|CVAR_GLOBALCONFIG|CVAR_NOINITCALL, "changes the texture filtering settings")
+CUSTOM_CVARD(Int, gl_texture_filter, 0, CVAR_ARCHIVE|CVAR_GLOBALCONFIG|CVAR_NOINITCALL, "changes the texture filtering settings")
 {
 	if (self < 0 || self > 6) self=4;
 	screen->SetTextureFilterMode();
